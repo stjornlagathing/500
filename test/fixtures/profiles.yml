@@ -1,0 +1,24 @@
+# == Schema Information
+# Schema version: 20101023142208
+#
+# Table name: profiles
+#
+#  id         :integer         not null, primary key
+#  url        :string(255)
+#  network    :string(255)
+#  user_id    :integer
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  url: MyString
+  network: MyString
+  user_id: 1
+
+two:
+  url: MyString
+  network: MyString
+  user_id: 1

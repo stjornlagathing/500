@@ -1,0 +1,15 @@
+<h1>Listing candidates</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% @candidates.each do |candidate| %>
+  <tr>
+    <td><%= candidate.name %></td>
+    <td><%= candidate.age %></td>
+    <td><%= link_to 'Show', candidate %></td>
+  </tr>
+<% end %>
+</table>
+

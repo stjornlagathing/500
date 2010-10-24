@@ -1,0 +1,19 @@
+<%= link_to "<< All candidates", candidates_path %>
+
+<h1><%= @candidate.name %></h1>
+
+<div style="float:left">
+  <%= image_tag @candidate.avatar_url %>
+</div>
+<h2>Age</h2> <%= @candidate.age %>
+<h2>Bio</h2>
+<p>
+  <%= @candidate.bio %>
+</p>
+<h2>Networks:</h2>
+<% unless @candidate.profiles.blank? %>
+  <% for p in @candidate.profiles %>
+    <%= render :partial => "profile", :locals => {:profile => p} %>
+  <% end %>
+<% end %>
+

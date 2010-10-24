@@ -1,0 +1,5 @@
+<% 
+  network = profile.network.to_s.downcase
+  partial = "profiles/#{network}" 
+%>                                   
+<%= render :partial => partial, :locals => {:profile => profile} %>

@@ -7,3 +7,7 @@ body{
   background-color: #fff;
   padding:40px;
 }
+
+.profile_url{
+  display: none;
+}

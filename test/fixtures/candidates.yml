@@ -1,0 +1,28 @@
+# == Schema Information
+# Schema version: 20101023142208
+#
+# Table name: candidates
+#
+#  id         :integer         not null, primary key
+#  name       :string(255)
+#  gender     :string(255)
+#  age        :integer
+#  town       :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#  bio        :text
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  gender: MyString
+  age: 1
+  town: MyString
+
+two:
+  name: MyString
+  gender: MyString
+  age: 1
+  town: MyString

@@ -1,3 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
-  map.root :controller => "home"
+  map.resources :candidates
+
+  map.proxy "proxy", :controller => "proxy", :action => "rss"
+  map.root :controller => "candidates"
 end
