@@ -8,6 +8,8 @@ Rails::Initializer.run do |config|
 
   config.gem 'will_paginate', :version => '~> 2.3.11', :source => 'http://gemcutter.org'
   config.gem 'alea', :lib => "alea" 
+  config.gem "ri_cal", :version => "0.8.7"
+  
   config.time_zone = 'UTC'
 
   #config.i18n.default_locale = :is

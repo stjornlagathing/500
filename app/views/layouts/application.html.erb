@@ -3,26 +3,34 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title>Stjórnlagaþing 2011</title>
-  
+
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.js"></script>
   <%= javascript_include_tag "jrails" %>
   <%= javascript_include_tag "jquery.jfeed" %>
   <%= javascript_include_tag "jquery.hotkeys" %>
+  <%= javascript_include_tag "jquery.datatables.min" %>   
+  
   <%= javascript_include_tag "application" %>
-  
+
   <%= stylesheet_link_tag "helper" %>
-  
+  <%= stylesheet_link_tag "tables" %>
+
 </head>
 
 <body>
-
-<div id="coming_soon">
-  <%= yield %>
-  <div id="footer">
+  <div id="coming_soon">
+    <%= link_to image_tag('logo2011.png'), root_path %>
     
-  </div>
-</div>
+    <%= render :partial => 'shared/header' %>
+    
+    <%= yield %>
 
+    <%= render :partial => 'shared/footer' %>
+
+  </div>
+  <%= render :partial => 'shared/rpx_js' %>
+
+  
 </body>
 </html>

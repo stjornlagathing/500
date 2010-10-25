@@ -8,6 +8,7 @@ jQuery.fn.autolink = function () {
 
 $(document).ready(function() {     
 
+  // PROFILE CONTENT MANAGEMENT
   $(".profile.facebook").each(function() {
     var profile = $(this)
     var url = profile.find('span.profile_url').html();
@@ -55,21 +56,47 @@ $(document).ready(function() {
     
   });
   
+  // KEY SHORCUTS
+  $(document).bind('keydown', '0', function (evt){
+    $("#jump_to_next_candidate").addClass("active");
+    next = $("#jump_to_next_candidate").attr('href');
+    if (next){
+      window.location = next;
+    }
+    return false; 
+  });
+  $(document).bind('keydown', '1', function (evt){
+    vote_candidate("aye");
+    return false; 
+  });
+  $(document).bind('keydown', '2', function (evt){
+    vote_candidate("maybe");
+    return false; 
+  });
+  $(document).bind('keydown', '3', function (evt){
+    vote_candidate("nay");
+    return false; 
+  });
   
-  jQuery(document).bind('keydown', '1', function (evt){
-    sort_candidate("aye!");
-    return false; 
+  
+  // TABLE NICETIES
+  $(".datatable").each(function (i) {
+    opts = {"bPaginate": false,
+            "bLengthChange": false,
+            "bFilter": true,
+            "bSort": true,
+            "bRetrieve": true,
+            "bInfo": false}
+       
+    $(this).dataTable(opts);
   });
-  jQuery(document).bind('keydown', '2', function (evt){
-    sort_candidate("maybe!");
-    return false; 
-  });
-  jQuery(document).bind('keydown', '3', function (evt){
-    sort_candidate("nay!");
-    return false; 
-  });
+  
+  
   
 });
-function sort_candidate(sorting){
-  alert(sorting);
+function vote_candidate(sorting){
+  option = $("#"+sorting+"_this_candidate")
+  $("#voting_spinner").show();
+  option.addClass("active");
+  option.click();
 }

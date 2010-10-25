@@ -1,0 +1,19 @@
+<div id="header" style="float:right">
+  <% if logged_in? %>
+    <p><strong>Hi <%= current_user.name %>!</strong> | <%= link_to "logout", logout_path, :class=>"btn btnLogout" %></p>
+    <p>
+      <%= link_to "Aye: #{current_user.aye.size}", aye_candidates_path %> | 
+      <%= link_to "Maybe: #{current_user.maybe.size}", maybe_candidates_path %> | 
+      <%= link_to "Nay: #{current_user.nay.size}", nay_candidates_path %>
+    </p>
+    <p>Reviewed percentage: <%= current_user.reviewed_percentage %>%</p>
+    <div style="text-align: right;">
+      <%= link_to "Discover a new candidate >>", next_candidates_path, :class=>"btn", :id => "jump_to_next_candidate" %>
+    </div>
+  <% else %>
+    <% token = RAILS_ENV == "development" ? "http%3A%2F%2F0.0.0.0%3A3000%2Frpx": "http%3A%2F%2Fc500.heroku.com%2Frpx" %>
+    <a class="rpxnow" onclick="return false;" href="https://stjornlagathing.rpxnow.com/openid/v2/signin?token_url=<%= token %>">
+      login 
+    </a>
+  <% end %>
+</div>

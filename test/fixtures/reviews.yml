@@ -1,12 +1,12 @@
 # == Schema Information
-# Schema version: 20101024145339
+# Schema version: 20101024154654
 #
-# Table name: profiles
+# Table name: reviews
 #
 #  id           :integer         not null, primary key
-#  url          :string(255)
-#  network      :string(255)
 #  candidate_id :integer
+#  user_id      :integer
+#  vote         :integer
 #  created_at   :datetime
 #  updated_at   :datetime
 #
@@ -14,11 +14,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  url: MyString
-  network: MyString
+  candidate_id: 1
   user_id: 1
+  vote: 1
 
 two:
-  url: MyString
-  network: MyString
+  candidate_id: 1
   user_id: 1
+  vote: 1

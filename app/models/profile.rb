@@ -1,14 +1,14 @@
 # == Schema Information
-# Schema version: 20101023142208
+# Schema version: 20101024145339
 #
 # Table name: profiles
 #
-#  id         :integer         not null, primary key
-#  url        :string(255)
-#  network    :string(255)
-#  user_id    :integer
-#  created_at :datetime
-#  updated_at :datetime
+#  id           :integer         not null, primary key
+#  url          :string(255)
+#  network      :string(255)
+#  candidate_id :integer
+#  created_at   :datetime
+#  updated_at   :datetime
 #
 
 class Profile < ActiveRecord::Base

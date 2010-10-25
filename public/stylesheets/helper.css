@@ -7,7 +7,89 @@ body{
   background-color: #fff;
   padding:40px;
 }
-
+table{
+  width:100%;
+}
 .profile_url{
   display: none;
+}
+
+.btn, .btn:visited
+{
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,.65);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.65);
+  box-shadow: 0 1px 3px rgba(0,0,0,.65);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #efefef;
+  border-bottom: 1px solid #333;
+  color: #3f3f3f;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  padding: 8px 10px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  width: auto;
+  white-space: nowrap;
+  overflow: visible;
+}
+.btn:hover
+{
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,.65);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.65);
+  box-shadow: 0 1px 3px rgba(0,0,0,.65);
+  border-bottom: 1px solid #000;
+  color: #000;
+}
+.btn:hover.aye
+{
+  background-color:#DAFF0D;
+}
+.btn:hover.nay
+{
+  background-color:#FF6A70;
+}
+.btn:hover.maybe
+{
+  background-color:#FFBD17;
+}
+.btn:active
+{
+  -moz-box-shadow: 0 1px 1px rgba(0,0,0,.65);
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.65);
+  box-shadow: 0 1px 1px rgba(0,0,0,.65);
+  outline: none;
+  top: 1px;
+}
+span.btn
+{
+  cursor: default;
+}
+span.btn:active
+{
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,.65);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.65);
+  box-shadow: 0 1px 3px rgba(0,0,0,.65);
+  top: 0px;
+}
+.btn.active
+{
+  background-color:#0098FF;
+}
+
+.btn.aye.active
+{
+  background-color:#DAFF0D;
+}
+.btn.nay.active
+{
+  background-color:#FF6A70;
+}
+.btn.maybe.active
+{
+  background-color:#FFBD17;
 }

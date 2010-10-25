@@ -1,10 +1,11 @@
-<%= link_to "<< All candidates", candidates_path %>
+<h1>
+  <%= @candidate.name %><br/>
+  <%= render :partial => 'votation_actions' %>
+</h1>
 
-<h1><%= @candidate.name %></h1>
 
-<div style="float:left">
-  <%= image_tag @candidate.avatar_url %>
-</div>
+<%= image_tag @candidate.avatar_url, :width => "64" %>
+
 <h2>Age</h2> <%= @candidate.age %>
 <h2>Bio</h2>
 <p>

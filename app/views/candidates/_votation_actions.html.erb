@@ -1,0 +1,34 @@
+<% if logged_in? %>
+  <% if is_aye(@candidate) %>
+    <span class="btn aye active">Aye!</span>
+  <% else %>
+    <%= link_to "Aye!", vote_aye_candidate_path(@candidate), 
+                        :method => :post, 
+                        :class=>"btn aye", 
+                        :id => "aye_this_candidate" %>
+  <% end %>
+  
+  <% if is_maybe(@candidate) %>
+    <span class="btn maybe active">Maybe!</span>
+  <% else %>
+    <%= link_to "Maybe!", vote_maybe_candidate_path(@candidate), 
+                          :method => :post, 
+                          :class=>"btn maybe",
+                          :id => "maybe_this_candidate" %>
+  <% end %>
+  
+  <% if is_nay(@candidate) %>
+    <span class="btn nay active">Nay!</span>
+  <% else %>
+    <%= link_to "Nay!", vote_nay_candidate_path(@candidate), 
+                        :method => :post, 
+                        :class=>"btn nay",
+                        :id => "nay_this_candidate" %>
+  <% end %>
+  
+  <span id="voting_spinner" style="display:none">
+    Voting... <%= image_tag "ajax-loader.gif"  %>
+  </span>  
+<% else %>
+  Login for voting
+<% end %>

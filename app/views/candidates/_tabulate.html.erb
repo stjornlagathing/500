@@ -1,0 +1,24 @@
+<table class="datatable">
+  <thead> 
+    <tr> 
+      <th>Name</th> 
+      <th>Age</th> 
+      <th>Networks</th> 
+      <th></th> 
+    </tr> 
+  </thead> 
+  <tbody>  
+  <% candidates.each do |candidate| %>
+    <tr>
+      <td><%= candidate.name %></td>
+      <td><%= candidate.age %></td>
+      <td>
+        <% for profile in candidate.profiles %>
+          <%= image_tag "icons/#{profile.network}.png" %> 
+        <% end %>
+      </td>
+      <td><%= link_to 'Show', candidate %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
