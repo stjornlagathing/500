@@ -10,6 +10,8 @@
     <div style="text-align: right;">
       <%= link_to "Discover a new candidate >>", next_candidates_path, :class=>"btn", :id => "jump_to_next_candidate" %>
     </div>
+    <br/>
+    <em style="color:#bfbfbf">(Shorcuts 0:next | 1:aye | 2:maybe | 3:nay)</em>
   <% else %>
     <% token = RAILS_ENV == "development" ? "http%3A%2F%2F0.0.0.0%3A3000%2Frpx": "http%3A%2F%2Fc500.heroku.com%2Frpx" %>
     <a class="rpxnow" onclick="return false;" href="https://stjornlagathing.rpxnow.com/openid/v2/signin?token_url=<%= token %>">
