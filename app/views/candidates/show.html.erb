@@ -11,7 +11,7 @@
 <p>
   <%= @candidate.bio %>
 </p>
-<h2>Networks:</h2>
+<h2>Af vefnum:</h2>
 <% unless @candidate.profiles.blank? %>
   <% for p in @candidate.profiles %>
     <%= render :partial => "profile", :locals => {:profile => p} %>

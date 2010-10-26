@@ -1,34 +1,34 @@
 <% if logged_in? %>
   <% if is_aye(@candidate) %>
-    <span class="btn aye active">Aye!</span>
+    <span class="btn aye active">Já</span>
   <% else %>
-    <%= link_to "Aye!", vote_aye_candidate_path(@candidate), 
+    <%= link_to "Já", vote_aye_candidate_path(@candidate), 
                         :method => :post, 
                         :class=>"btn aye", 
                         :id => "aye_this_candidate" %>
   <% end %>
   
   <% if is_maybe(@candidate) %>
-    <span class="btn maybe active">Maybe!</span>
+    <span class="btn maybe active">Kannski</span>
   <% else %>
-    <%= link_to "Maybe!", vote_maybe_candidate_path(@candidate), 
+    <%= link_to "Kannski", vote_maybe_candidate_path(@candidate), 
                           :method => :post, 
                           :class=>"btn maybe",
                           :id => "maybe_this_candidate" %>
   <% end %>
   
   <% if is_nay(@candidate) %>
-    <span class="btn nay active">Nay!</span>
+    <span class="btn nay active">Nei</span>
   <% else %>
-    <%= link_to "Nay!", vote_nay_candidate_path(@candidate), 
+    <%= link_to "Nei", vote_nay_candidate_path(@candidate), 
                         :method => :post, 
                         :class=>"btn nay",
                         :id => "nay_this_candidate" %>
   <% end %>
   
   <span id="voting_spinner" style="display:none">
-    Voting... <%= image_tag "ajax-loader.gif"  %>
+    Kýs... <%= image_tag "ajax-loader.gif"  %>
   </span>  
 <% else %>
-  Login for voting
+  Skráðu þig inn til að setja frambjóðendur á þinn eigin forgangslista
 <% end %>
