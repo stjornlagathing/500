@@ -11,7 +11,7 @@
   <% candidates.each do |candidate| %>
     <tr>
       <td><%= candidate.name %></td>
-      <td><%= candidate.age %></td>
+      <td><%= candidate.years %></td>
       <td>
         <% for profile in candidate.profiles %>
           <%= image_tag "icons/#{profile.network}.png" %> 
