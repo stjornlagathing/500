@@ -2,4 +2,6 @@ rails --version 2.3.8
 will_paginate --version 2.3.11
 alea
 ri_cal --version 0.8.7
-faker 
+faker
+couchrest
+ 
