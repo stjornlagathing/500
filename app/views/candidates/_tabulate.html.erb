@@ -1,23 +1,24 @@
+
 <table class="datatable">
   <thead> 
     <tr> 
       <th>Nafn</th> 
       <th>Aldur</th> 
-      <th>Vefsíður</th> 
-      <th></th> 
+      <%# <th>Vefsíður</th>  %>
     </tr> 
   </thead> 
   <tbody>  
   <% candidates.each do |candidate| %>
     <tr>
-      <td><%= candidate.name %></td>
+      <td><%= link_to  candidate.name, candidate %></td>
       <td><%= candidate.years %></td>
+      <%# 
       <td>
-        <% for profile in candidate.profiles %>
-          <%= image_tag "icons/#{profile.network}.png" %> 
-        <% end %>
+        <% for profile in candidate.profiles >
+          < image_tag "icons/#{profile.network}.png" > 
+        <% end 
       </td>
-      <td><%= link_to 'Show', candidate %></td>
+       %>
     </tr>
   <% end %>
   </tbody>

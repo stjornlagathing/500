@@ -1,81 +1,15 @@
-/* v1.0 | 20080212 */
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-
-/* remember to define focus styles! */
-:focus {
-	outline: 0;
-}
-
-/* remember to highlight inserts somehow! */
-ins {
-	text-decoration: none;
-}
-del {
-	text-decoration: line-through;
-}
-
-/* tables still need 'cellspacing="0"' in the markup */
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
 body{
   background-color: #efefef;
   margin:auto auto;
-  font-family: verdana; 
 }
-
-
-
 #coming_soon{
   margin: 50px 100px;
   background-color: #fff;
   padding:40px;
 }
-
-h1 { font-size: 1.4em;}
-h2 { font-size: 1.1em; margin: 10px 0 3px 0; }
-
 table{
   width:100%;
 }
-table td { padding: 3px; }
-table th { text-align: left; padding: 3px; }
-
-.dataTables_filter { margin-top: -40px;}
-
 .profile_url{
   display: none;
 }

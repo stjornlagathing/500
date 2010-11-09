@@ -6,21 +6,21 @@
 
 <%= image_tag @candidate.avatar_url, :width => "64" %>
 
-<h2>Age</h2> <%= @candidate.years %>
-<h2>Title</h2>
+<h2>Aldur</h2> <%= @candidate.years %>
+<h2>Titill</h2>
 <p>
   <%= @candidate.title %>
 </p>
-<h2>Background</h2>
+<h2>Menntun / starfsreynsla</h2>
 <p>
   <%= @candidate.background %>
 </p>
-<h2>Pitch</h2>
+<h2>Hvers vegna býð ég mig fram til stjórnlagaþings?</h2>
 <p>
   <%= @candidate.pitch %>
 </p>
-<h2>Af vefnum:</h2>
 <% unless @candidate.profiles.blank? %>
+  <h2>Af vefnum:</h2>
   <% for p in @candidate.profiles %>
     <%= render :partial => "profile", :locals => {:profile => p} %>
   <% end %>

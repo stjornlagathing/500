@@ -1,21 +1,24 @@
 <div id="header" style="float:right">
   <% if logged_in? %>
-    <p><strong>Hæ <%= current_user.name %>!</strong> | <%= link_to "logout", logout_path, :class=>"btn btnLogout" %></p>
+    <p><strong>Hæ <%= current_user.name %>!</strong> | <%= link_to "Útskráning", logout_path, :class=>"btn btnLogout" %></p>
     <p>
       <%= link_to "Já: #{current_user.aye.size}", aye_candidates_path %> | 
       <%= link_to "Kannski: #{current_user.maybe.size}", maybe_candidates_path %> | 
       <%= link_to "Nei: #{current_user.nay.size}", nay_candidates_path %>
     </p>
-    <p>Þú hefur merkt við <%= current_user.reviewed_percentage %>% frambjóðenda</p>
+    <br/>
+    <p>Þú hefur merkt við <%= current_user.reviewed_percentage %>% frambjóðenda</p><br/>
     <div style="text-align: right;">
-      <%= link_to "Discover a new candidate >>", next_candidates_path, :class=>"btn", :id => "jump_to_next_candidate" %>
+      <%= link_to "Sækja frambjóðanda af handahófi", next_candidates_path, :class=>"btn", :id => "jump_to_next_candidate" %>
     </div>
     <br/>
-    <em style="color:#bfbfbf">(Shorcuts 0:next | 1:aye | 2:maybe | 3:nay)</em>
+    <em style="color:#bfbfbf">(Flýtilyklar 0:næsti | 1:já | 2:kannski | 3:nei)</em>
   <% else %>
     <% token = RAILS_ENV == "development" ? "http%3A%2F%2F0.0.0.0%3A3000%2Frpx": "http%3A%2F%2Fwww.frambjodendur.is%2Frpx" %>
     <a class="rpxnow" onclick="return false;" href="https://frambjodendur.rpxnow.com/openid/v2/signin?token_url=<%= token %>">
-      login 
+      Skráðu þig inn til að setja á lista 
     </a>
   <% end %>
 </div>
+
+<br/><br/><br/><br/><br/><br/><br/><br/>
