@@ -6,10 +6,18 @@
 
 <%= image_tag @candidate.avatar_url, :width => "64" %>
 
-<h2>Age</h2> <%= @candidate.age %>
-<h2>Bio</h2>
+<h2>Age</h2> <%= @candidate.years %>
+<h2>Title</h2>
 <p>
-  <%= @candidate.bio %>
+  <%= @candidate.title %>
+</p>
+<h2>Background</h2>
+<p>
+  <%= @candidate.background %>
+</p>
+<h2>Pitch</h2>
+<p>
+  <%= @candidate.pitch %>
 </p>
 <h2>Af vefnum:</h2>
 <% unless @candidate.profiles.blank? %>

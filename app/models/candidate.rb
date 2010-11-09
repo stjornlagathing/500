@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20101024145339
+# Schema version: 20101109133708
 #
 # Table name: candidates
 #
@@ -12,6 +12,15 @@
 #  updated_at :datetime
 #  bio        :text
 #  kennitala  :string(255)
+#  birthyear  :integer
+#  background :text
+#  zip        :integer
+#  email      :string(255)
+#  pitch      :text
+#  title      :text
+#  image_url  :string(255)
+#  detail_url :string(255)
+#  idcode     :integer
 #
 
 class Candidate < ActiveRecord::Base
@@ -22,6 +31,9 @@ class Candidate < ActiveRecord::Base
   }
   
   def avatar_url
-    "/images/user/default-avatar.png"
+    self.image_url
+  end
+  def years
+    Date.today.year - self.birthyear
   end
 end
