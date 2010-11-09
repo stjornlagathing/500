@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
   end
     
   def rpx
-    rpx = Rpx::RpxHelper.new(JANRAIN_API, "https://stjornlagathing.rpxnow.com/", "c500.heroku.com")
+    rpx = Rpx::RpxHelper.new(JANRAIN_API, "https://frambjodendur.rpxnow.com/", "www.frambjodendur.is")
     profile = rpx.auth_info(params[:token])
     unless @user = User.find_by_identifier(profile['identifier'])
       @user = User.create!(:email => profile['email'], :identifier => profile['identifier'], :name => profile['displayName'])

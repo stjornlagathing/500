@@ -16,4 +16,4 @@ Rails::Initializer.run do |config|
   #config.i18n.default_locale = :is
 end
 
-JANRAIN_API = "a0400ba6820a8589365e69f421e88d6cde02b0a5"
+JANRAIN_API = "a10feb51500bf0453061ad30bdcb6f08c85135bf"
