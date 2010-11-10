@@ -4,6 +4,9 @@
     <tr> 
       <th>Nafn</th> 
       <th>Aldur</th> 
+      <% if logged_in? %>
+        <th>Val</th> 
+      <% end %>
       <%# <th>Vefsíður</th>  %>
     </tr> 
   </thead> 
@@ -12,6 +15,9 @@
     <tr>
       <td><%= link_to  candidate.name, candidate %></td>
       <td><%= candidate.years %></td>
+      <% if logged_in? %>
+        <td><%= show_review(candidate) %></td>
+      <% end %>
       <%# 
       <td>
         <% for profile in candidate.profiles >
