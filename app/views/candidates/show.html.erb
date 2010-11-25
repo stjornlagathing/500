@@ -1,8 +1,8 @@
 <h1>
-  <%= @candidate.name %><br/>
+  <%= @candidate.name %> <span class="idcode"><%= @candidate.idcode %></span><br/><br/>
   <%= render :partial => 'votation_actions' %>
 </h1>
-
+<br/><br/>
 
 <%= image_tag @candidate.avatar_url, :width => "64" %>
 

@@ -2,6 +2,7 @@
 <table class="datatable">
   <thead> 
     <tr> 
+      <th width="90px">Númer</th> 
       <th>Nafn</th> 
       <th>Aldur</th> 
       <% if logged_in? %>
@@ -13,6 +14,7 @@
   <tbody>  
   <% candidates.each do |candidate| %>
     <tr>
+      <td><%= candidate.idcode %></td>
       <td><%= link_to  candidate.name, candidate %></td>
       <td><%= candidate.years %></td>
       <% if logged_in? %>
