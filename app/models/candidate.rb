@@ -25,6 +25,7 @@
 
 class Candidate < ActiveRecord::Base
   has_many :profiles
+  has_many :reviews
   
   named_scope :pending_for, lambda { |user|
         { :conditions => ['NOT EXISTS(SELECT * FROM reviews WHERE candidate_id=candidates.id and user_id = ?)', user.id]}
